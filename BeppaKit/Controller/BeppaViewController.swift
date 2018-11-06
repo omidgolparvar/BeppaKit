@@ -22,7 +22,7 @@ public class BeppaViewController: UIViewController {
 	@IBOutlet private weak var label_Message					: UILabel!
 	
 	private lazy var view_ActivityIndicator	: UIActivityIndicatorView = {
-		let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+		let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
 		activityIndicator.color = .black
 		activityIndicator.center = self.view.center
 		activityIndicator.hidesWhenStopped = true
@@ -31,7 +31,7 @@ public class BeppaViewController: UIViewController {
 		activityIndicator.startAnimating()
 		
 		self.view.addSubview(activityIndicator)
-		self.view.bringSubviewToFront(activityIndicator)
+		self.view.bringSubview(toFront: activityIndicator)
 		return activityIndicator
 	}()
 	
@@ -231,7 +231,7 @@ extension BeppaViewController {
 	
 	private func shakeDotViewsForFailure() {
 		let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-		animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+		animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
 		animation.duration = 0.5
 		animation.values = [-16.0, 16.0, -16.0, 16.0, -8.0, 8.0, -5.0, 5.0, 0.0]
 		stackView_Codes.layer.add(animation, forKey: "shake")
