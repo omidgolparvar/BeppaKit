@@ -82,7 +82,7 @@
 				1AFA1837219077AF00A44D64 /* Assets.xcassets */,
 				1AFA18792191862700A44D64 /* Controller */,
 				1AFA18782191861A00A44D64 /* Config */,
-				1AFA18412190B19A00A44D64 /* NumpadButton.swift */,
+				1AFA187A2191B9CB00A44D64 /* Views */,
 			);
 			path = BeppaKit;
 			sourceTree = "<group>";
@@ -113,6 +113,14 @@
 				1AFA18742191846D00A44D64 /* BeppaValidationProtocol.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AFA187A2191B9CB00A44D64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AFA18412190B19A00A44D64 /* NumpadButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
