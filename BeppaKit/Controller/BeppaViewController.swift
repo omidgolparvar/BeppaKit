@@ -36,7 +36,8 @@ public class BeppaViewController: UIViewController {
 	}()
 	
 	private var feedbackGenerator		= UINotificationFeedbackGenerator()
-	private var hasBiometricHardware	: Bool	= true
+	private var hasBiometricHardware	: Bool		= true
+	private var reasonForBiometricUsage	: String	= ""
 	private var canEnterNumber			: Bool		= true
 	private var enteredCode				: String	= ""
 	
@@ -90,7 +91,27 @@ public class BeppaViewController: UIViewController {
 	}
 	
 	@IBAction private func action_BiometricTapped(_ sender: UIButton) {
-		dismiss(animated: true, completion: nil)
+		guard hasBiometricHardware else { return }
+		
+		let context = LAContext()
+		context.localizedFallbackTitle = "احراز هویت"
+		var error: NSError?
+		
+		guard context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
+				let alert = UIAlertController(title: "بروز خطا", message: error?.localizedDescription, preferredStyle: .alert)
+				alert.view.tintColor = .black
+				alert.addAction(UIAlertAction(title: "باشه", style: .cancel, handler: { _ in }))
+				self.present(alert, animated: true)
+				return
+		}
+		
+		context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reasonForBiometricUsage) { success, error in
+			if success {
+				self.dismiss(animated: true, completion: nil)
+			} else {
+				print(error ?? "error")
+			}
+		}
 	}
 	
 }
@@ -164,11 +185,13 @@ extension BeppaViewController {
 				let bundle = Bundle(for: BeppaViewController.self)
 				switch context.biometryType {
 				case .faceID:
+					reasonForBiometricUsage = "احراز هویت با استفاده از چهره"
 					button_Biometric.setImage(UIImage(named: "faceid", in: bundle, compatibleWith: nil), for: .normal)
 					button_Biometric.tintColor = BeppaConfig.UserInterface.NumpadButton.TintColor
 					button_Biometric.alpha = 0.0
 					button_Biometric.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
 				case .touchID:
+					reasonForBiometricUsage = "احراز هویت با استفاده از اثر انگشت"
 					button_Biometric.setImage(UIImage(named: "touch", in: bundle, compatibleWith: nil), for: .normal)
 					button_Biometric.tintColor = BeppaConfig.UserInterface.NumpadButton.TintColor
 					button_Biometric.alpha = 0.0
