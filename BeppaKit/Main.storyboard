@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beppa View Controller-->
+        <scene sceneID="JWI-t3-lKB">
+            <objects>
+                <viewController storyboardIdentifier="BeppaViewController" id="TBG-wy-tlK" customClass="BeppaViewController" customModule="BeppaKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BQx-OC-PIh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAe-05-xgF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vcy-ze-8Gz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51O-mF-hIJ">
+                                            <rect key="frame" x="57.5" y="112" width="260" height="443.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رمز عبور خود را وارد نمایید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-NK-sGM">
+                                                    <rect key="frame" x="16" y="0.0" width="228" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O5l-ob-ULF">
+                                                    <rect key="frame" x="80" y="35.5" width="100" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="NjS-V1-kMW"/>
+                                                        <constraint firstAttribute="width" constant="100" id="wnS-11-Wxc"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="arQ-ly-AIK">
+                                                    <rect key="frame" x="0.0" y="91.5" width="260" height="340"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Q41-Rw-MXg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="76"/>
+                                                            <subviews>
+                                                                <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gI9-o6-jcV" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="gI9-o6-jcV" secondAttribute="height" multiplier="1:1" id="yMd-42-iow"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۱"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="CpD-ww-OXg"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lky-DL-P4d" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="92" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="Lky-DL-P4d" secondAttribute="height" multiplier="1:1" id="dVj-a8-Cgc"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۲"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="DPM-6A-cII"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPk-21-81H" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="184" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="jPk-21-81H" secondAttribute="height" multiplier="1:1" id="UxU-oA-dg0"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۳"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="rB7-5d-dgd"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-rE-MeQ">
+                                                            <rect key="frame" x="0.0" y="88" width="260" height="76"/>
+                                                            <subviews>
+                                                                <button opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03W-AV-eba" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="03W-AV-eba" secondAttribute="height" multiplier="1:1" id="aHD-mr-fqU"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۴"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="4Cm-D6-aXP"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="1005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf7-Bs-L4R" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="92" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="bf7-Bs-L4R" secondAttribute="height" multiplier="1:1" id="hvT-aI-78t"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۵"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="kLB-oO-De5"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="1006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpC-T7-NH4" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="184" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="kpC-T7-NH4" secondAttribute="height" multiplier="1:1" id="LIo-hy-efP"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۶"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="Oas-FD-v5X"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PnG-Rb-CIa">
+                                                            <rect key="frame" x="0.0" y="176" width="260" height="76"/>
+                                                            <subviews>
+                                                                <button opaque="NO" tag="1007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0Z-5S-H51" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="t0Z-5S-H51" secondAttribute="height" multiplier="1:1" id="uYY-sb-WCG"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۷"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="Gbb-c8-7G0"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="1008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEf-YR-j3x" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="92" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="wEf-YR-j3x" secondAttribute="height" multiplier="1:1" id="6SK-3e-Lin"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۸"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="fjI-E1-aAF"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="1009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyc-oD-arF" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="184" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="Zyc-oD-arF" secondAttribute="height" multiplier="1:1" id="Jah-8X-PRg"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۹"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="ofa-w4-qyj"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hal-nc-mGX">
+                                                            <rect key="frame" x="0.0" y="264" width="260" height="76"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0k-RR-g4I">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="t0k-RR-g4I" secondAttribute="height" multiplier="1:1" id="0LW-4z-Rtk"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" image="faceid"/>
+                                                                    <connections>
+                                                                        <action selector="action_BiometricTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="2kD-pG-PrF"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiM-6a-KVZ" customClass="NumpadButton" customModule="BeppaKit" customModuleProvider="target">
+                                                                    <rect key="frame" x="92" y="0.0" width="76" height="76"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="aiM-6a-KVZ" secondAttribute="height" multiplier="1:1" id="pAO-l4-5ah"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="۰"/>
+                                                                    <connections>
+                                                                        <action selector="action_NumbpadTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="Gk3-GZ-3xK"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmY-gd-JNQ">
+                                                                    <rect key="frame" x="184" y="0.0" width="76" height="76"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="JmY-gd-JNQ" secondAttribute="height" multiplier="1:1" id="PKh-Ro-HuG"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" image="delete"/>
+                                                                    <connections>
+                                                                        <action selector="action_DeleteTapped:" destination="TBG-wy-tlK" eventType="touchUpInside" id="dm0-id-YCx"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Jre-NK-sGM" firstAttribute="leading" secondItem="51O-mF-hIJ" secondAttribute="leading" constant="16" id="4Fa-b4-dWP"/>
+                                                <constraint firstItem="arQ-ly-AIK" firstAttribute="top" secondItem="O5l-ob-ULF" secondAttribute="bottom" constant="32" id="UnX-nU-E2Q"/>
+                                                <constraint firstItem="Jre-NK-sGM" firstAttribute="top" secondItem="51O-mF-hIJ" secondAttribute="top" id="XZh-YK-Bks"/>
+                                                <constraint firstAttribute="trailing" secondItem="arQ-ly-AIK" secondAttribute="trailing" id="YFA-Gm-Yex"/>
+                                                <constraint firstAttribute="bottom" secondItem="arQ-ly-AIK" secondAttribute="bottom" constant="12" id="bJk-wa-Wuc"/>
+                                                <constraint firstItem="arQ-ly-AIK" firstAttribute="leading" secondItem="51O-mF-hIJ" secondAttribute="leading" id="c9q-Px-OU7"/>
+                                                <constraint firstItem="O5l-ob-ULF" firstAttribute="top" secondItem="Jre-NK-sGM" secondAttribute="bottom" constant="16" id="mqG-8w-8n5"/>
+                                                <constraint firstAttribute="trailing" secondItem="Jre-NK-sGM" secondAttribute="trailing" constant="16" id="mr4-5r-0tW"/>
+                                                <constraint firstAttribute="width" constant="260" id="soz-jb-hMZ"/>
+                                                <constraint firstItem="O5l-ob-ULF" firstAttribute="centerX" secondItem="51O-mF-hIJ" secondAttribute="centerX" id="upi-xW-NDX"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="این یک متن نمونه است برای نمایش خطای اعتبارسنجی کد وارد شده به کاربر و می‌تواند کمی طولانی باشد." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-0Q-2bp">
+                                            <rect key="frame" x="57.5" y="571.5" width="260" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="51O-mF-hIJ" firstAttribute="centerY" secondItem="Vcy-ze-8Gz" secondAttribute="centerY" id="5Ls-Tr-MKp"/>
+                                        <constraint firstItem="SSK-0Q-2bp" firstAttribute="centerX" secondItem="Vcy-ze-8Gz" secondAttribute="centerX" id="7Qn-ar-B7d"/>
+                                        <constraint firstItem="51O-mF-hIJ" firstAttribute="centerX" secondItem="Vcy-ze-8Gz" secondAttribute="centerX" id="Gyp-5d-OX7"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SSK-0Q-2bp" secondAttribute="bottom" constant="8" id="V9e-f8-pjy"/>
+                                        <constraint firstItem="SSK-0Q-2bp" firstAttribute="width" secondItem="51O-mF-hIJ" secondAttribute="width" id="VxB-gm-BMx"/>
+                                        <constraint firstItem="SSK-0Q-2bp" firstAttribute="top" secondItem="51O-mF-hIJ" secondAttribute="bottom" constant="16" id="iaK-Mi-zYP"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lbF-L2-bOh" firstAttribute="trailing" secondItem="MAe-05-xgF" secondAttribute="trailing" id="1sC-Y7-H3D"/>
+                            <constraint firstItem="MAe-05-xgF" firstAttribute="leading" secondItem="lbF-L2-bOh" secondAttribute="leading" id="AgQ-OF-udZ"/>
+                            <constraint firstItem="MAe-05-xgF" firstAttribute="top" secondItem="BQx-OC-PIh" secondAttribute="top" id="RXS-QQ-842"/>
+                            <constraint firstItem="lbF-L2-bOh" firstAttribute="bottom" secondItem="MAe-05-xgF" secondAttribute="bottom" id="baM-oq-fGd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lbF-L2-bOh"/>
+                    </view>
+                    <connections>
+                        <outlet property="button_Biometric" destination="t0k-RR-g4I" id="tWK-71-4nI"/>
+                        <outlet property="button_Delete" destination="JmY-gd-JNQ" id="QOS-jq-5oM"/>
+                        <outlet property="constraint_StackView_Codes_Width" destination="wnS-11-Wxc" id="shu-L4-asI"/>
+                        <outlet property="label_Message" destination="SSK-0Q-2bp" id="Jh8-mz-JSv"/>
+                        <outlet property="label_Title" destination="Jre-NK-sGM" id="jh3-ZP-mWD"/>
+                        <outlet property="stackView_Codes" destination="O5l-ob-ULF" id="m59-jk-kNn"/>
+                        <outlet property="view_NumpadHolder" destination="51O-mF-hIJ" id="kcW-vx-ULT"/>
+                        <outlet property="view_VisualEffect" destination="MAe-05-xgF" id="mv1-lQ-GXD"/>
+                        <outletCollection property="buttons_Numbers" destination="gI9-o6-jcV" collectionClass="NSMutableArray" id="gu4-1q-beq"/>
+                        <outletCollection property="buttons_Numbers" destination="Lky-DL-P4d" collectionClass="NSMutableArray" id="fLq-F6-Liw"/>
+                        <outletCollection property="buttons_Numbers" destination="jPk-21-81H" collectionClass="NSMutableArray" id="mf1-ug-OuJ"/>
+                        <outletCollection property="buttons_Numbers" destination="03W-AV-eba" collectionClass="NSMutableArray" id="0bg-Re-E4f"/>
+                        <outletCollection property="buttons_Numbers" destination="bf7-Bs-L4R" collectionClass="NSMutableArray" id="tO5-Z8-bcZ"/>
+                        <outletCollection property="buttons_Numbers" destination="kpC-T7-NH4" collectionClass="NSMutableArray" id="sZn-8u-o7y"/>
+                        <outletCollection property="buttons_Numbers" destination="t0Z-5S-H51" collectionClass="NSMutableArray" id="fw3-gH-Ye2"/>
+                        <outletCollection property="buttons_Numbers" destination="wEf-YR-j3x" collectionClass="NSMutableArray" id="5dl-Ie-1f1"/>
+                        <outletCollection property="buttons_Numbers" destination="Zyc-oD-arF" collectionClass="NSMutableArray" id="pNb-0I-9Rc"/>
+                        <outletCollection property="buttons_Numbers" destination="aiM-6a-KVZ" collectionClass="NSMutableArray" id="e8S-gD-Yzz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDw-A6-ZNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277.60000000000002" y="50.824587706146929"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete" width="40" height="30"/>
+        <image name="faceid" width="46" height="46"/>
+    </resources>
+</document>

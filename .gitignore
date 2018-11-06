@@ -1,0 +1,4 @@
+Pods/
+KIPOIAPTest_ObjectiveC/Pods/
+KIPOIAPTest_Swift/Pods/
+**/Podfile.lock
