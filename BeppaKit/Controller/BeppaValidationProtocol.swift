@@ -10,7 +10,9 @@ import Foundation
 
 public protocol BeppaValidationProtocol: NSObjectProtocol {
 	
-	func beppaController(_ controller: BeppaViewController, validate passcode: String, completion: @escaping (BeppaValidationResult) -> Void)
+	func beppaController(validate passcode: String, completion: @escaping (BeppaValidationResult) -> Void)
+	
+	func beppaControllerDidValidatePasscode(wasSuccessful: Bool)
 	
 }
 

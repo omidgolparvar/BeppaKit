@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'BeppaKit'
-  s.version               = '2.1.0'
+  s.version               = '2.2.0'
   s.summary               = 'یه بپا بذارین برای اپ‌تون!!'
   s.description           = <<-DESC
                             Written in Swift.

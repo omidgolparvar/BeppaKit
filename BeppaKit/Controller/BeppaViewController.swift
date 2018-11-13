@@ -73,7 +73,7 @@ public class BeppaViewController: UIViewController {
 		if indexOfNewValue == BeppaConfig.Controller.NumberOfDigits {
 			canEnterNumber = false
 			setupViews_ForValidation(isBeforeValidation: true)
-			delegate?.beppaController(self, validate: enteredCode, completion: setupViews_BasedOnValidationResult)
+			delegate?.beppaController(validate: enteredCode, completion: setupViews_BasedOnValidationResult)
 		}
 		
 	}
@@ -282,13 +282,15 @@ extension BeppaViewController {
 		switch result {
 		case .isValid:
 			feedbackGenerator.notificationOccurred(.success)
-			dismiss(animated: true, completion: nil)
+			let delegate = self.delegate
+			dismiss(animated: true) { delegate?.beppaControllerDidValidatePasscode(wasSuccessful: true) }
 		case .isInvalid(let message):
 			feedbackGenerator.notificationOccurred(.error)
 			label_Message.text = message ?? ""
 			setupViews_ForValidation(isBeforeValidation: false)
 			DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { self.shakeDotViewsForFailure() }
 			enteredCode = ""
+			delegate?.beppaControllerDidValidatePasscode(wasSuccessful: false)
 		}
 	}
 	
