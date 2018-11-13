@@ -136,6 +136,9 @@ extension BeppaViewController {
 		case let .visualEffect(style):
 			view.backgroundColor = .clear
 			view_VisualEffect.effect = UIBlurEffect(style: style)
+		case let .mix(color, style):
+			view.backgroundColor = color
+			view_VisualEffect.effect = UIBlurEffect(style: style)
 		}
 	}
 	private func setupViews_TitleLabel() {

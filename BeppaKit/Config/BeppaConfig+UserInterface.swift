@@ -49,6 +49,7 @@ extension BeppaConfig.UserInterface {
 	public enum ControllerBackgroundType {
 		case solid(color: UIColor)
 		case visualEffect(style: UIBlurEffect.Style)
+		case mix(backgroundColor: UIColor, visualEffectStyle: UIBlurEffect.Style)
 	}
 	
 }
