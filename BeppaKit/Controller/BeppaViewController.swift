@@ -283,14 +283,14 @@ extension BeppaViewController {
 		case .isValid:
 			feedbackGenerator.notificationOccurred(.success)
 			let delegate = self.delegate
-			dismiss(animated: true) { delegate?.beppaControllerDidValidatePasscode(wasSuccessful: true) }
+			dismiss(animated: true) { delegate?.beppaControllerDidValidatePasscode(self, wasSuccessful: true) }
 		case .isInvalid(let message):
 			feedbackGenerator.notificationOccurred(.error)
 			label_Message.text = message ?? ""
 			setupViews_ForValidation(isBeforeValidation: false)
 			DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { self.shakeDotViewsForFailure() }
 			enteredCode = ""
-			delegate?.beppaControllerDidValidatePasscode(wasSuccessful: false)
+			delegate?.beppaControllerDidValidatePasscode(self, wasSuccessful: false)
 		}
 	}
 	

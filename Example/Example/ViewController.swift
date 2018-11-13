@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 
 extension ViewController: BeppaValidationProtocol {
 	
-	func beppaControllerDidValidatePasscode(wasSuccessful: Bool) {
+	func beppaControllerDidValidatePasscode(_ controller: BeppaViewController, wasSuccessful: Bool) {
 		print("Success: \(wasSuccessful)")
 	}
 	

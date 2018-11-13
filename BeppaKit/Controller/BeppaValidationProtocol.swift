@@ -12,7 +12,7 @@ public protocol BeppaValidationProtocol: NSObjectProtocol {
 	
 	func beppaController(validate passcode: String, completion: @escaping (BeppaValidationResult) -> Void)
 	
-	func beppaControllerDidValidatePasscode(wasSuccessful: Bool)
+	func beppaControllerDidValidatePasscode(_ controller: BeppaViewController, wasSuccessful: Bool)
 	
 }
 
