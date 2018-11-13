@@ -107,7 +107,8 @@ public class BeppaViewController: UIViewController {
 		
 		context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reasonForBiometricUsage) { success, error in
 			if success {
-				self.dismiss(animated: true, completion: nil)
+				let delegate = self.delegate
+				self.dismiss(animated: true) { delegate?.beppaControllerDidValidatePasscode(self, wasSuccessful: true) }
 			} else {
 				print(error ?? "error")
 			}
