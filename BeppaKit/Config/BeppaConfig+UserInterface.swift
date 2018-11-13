@@ -20,6 +20,12 @@ extension BeppaConfig.UserInterface {
 		public static var BackgroundType			: ControllerBackgroundType	= .visualEffect(style: .extraLight)
 	}
 	
+	public final class DismissButton {
+		public static var Font						: UIFont	= UIFont.boldSystemFont(ofSize: 14)
+		public static var Text						: String	= "بازگشت"
+		public static var TextColor					: UIColor	= .black
+	}
+	
 	public final class Title {
 		public static var Font						: UIFont	= UIFont.boldSystemFont(ofSize: 16)
 		public static var Text						: String	= "رمز عبور را وارد نمایید"

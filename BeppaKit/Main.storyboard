@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -237,6 +238,14 @@
                                             <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvT-66-VKL">
+                                            <rect key="frame" x="24" y="24" width="47" height="30"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="بازگشت"/>
+                                            <connections>
+                                                <action selector="action_Dismiss:" destination="TBG-wy-tlK" eventType="touchUpInside" id="ovl-38-Pn7"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="51O-mF-hIJ" firstAttribute="centerY" secondItem="Vcy-ze-8Gz" secondAttribute="centerY" id="5Ls-Tr-MKp"/>
@@ -244,7 +253,9 @@
                                         <constraint firstItem="51O-mF-hIJ" firstAttribute="centerX" secondItem="Vcy-ze-8Gz" secondAttribute="centerX" id="Gyp-5d-OX7"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SSK-0Q-2bp" secondAttribute="bottom" constant="8" id="V9e-f8-pjy"/>
                                         <constraint firstItem="SSK-0Q-2bp" firstAttribute="width" secondItem="51O-mF-hIJ" secondAttribute="width" id="VxB-gm-BMx"/>
+                                        <constraint firstItem="GvT-66-VKL" firstAttribute="top" secondItem="Vcy-ze-8Gz" secondAttribute="top" constant="24" id="c64-61-ipZ"/>
                                         <constraint firstItem="SSK-0Q-2bp" firstAttribute="top" secondItem="51O-mF-hIJ" secondAttribute="bottom" constant="16" id="iaK-Mi-zYP"/>
+                                        <constraint firstItem="GvT-66-VKL" firstAttribute="leading" secondItem="Vcy-ze-8Gz" secondAttribute="leading" constant="24" id="taT-DR-Uf5"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="dark"/>
@@ -262,6 +273,7 @@
                     <connections>
                         <outlet property="button_Biometric" destination="t0k-RR-g4I" id="tWK-71-4nI"/>
                         <outlet property="button_Delete" destination="JmY-gd-JNQ" id="QOS-jq-5oM"/>
+                        <outlet property="button_Dismiss" destination="GvT-66-VKL" id="q9H-uy-rct"/>
                         <outlet property="constraint_StackView_Codes_Width" destination="wnS-11-Wxc" id="shu-L4-asI"/>
                         <outlet property="label_Message" destination="SSK-0Q-2bp" id="Jh8-mz-JSv"/>
                         <outlet property="label_Title" destination="Jre-NK-sGM" id="jh3-ZP-mWD"/>

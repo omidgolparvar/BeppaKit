@@ -20,6 +20,7 @@ public class BeppaViewController: UIViewController {
 	@IBOutlet private weak var stackView_Codes					: UIStackView!
 	@IBOutlet private weak var constraint_StackView_Codes_Width	: NSLayoutConstraint!
 	@IBOutlet private weak var label_Message					: UILabel!
+	@IBOutlet private weak var button_Dismiss					: UIButton!
 	
 	private lazy var view_ActivityIndicator	: UIActivityIndicatorView = {
 		let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
@@ -51,6 +52,10 @@ public class BeppaViewController: UIViewController {
 	public override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		animateNumpadButtonsOnAppear()
+	}
+	
+	@IBAction private func action_Dismiss(_ sender: UIButton) {
+		dismiss(animated: true, completion: nil)
 	}
 	
 	@IBAction private func action_NumbpadTapped(_ sender: UIButton) {
@@ -120,6 +125,7 @@ public class BeppaViewController: UIViewController {
 extension BeppaViewController {
 	
 	private func setupViews() {
+		button_Dismiss.isHidden = !BeppaConfig.Controller.HasDismissButton
 		setupViews_BackgroundView()
 		setupViews_TitleLabel()
 		setupViews_MessageLabel()

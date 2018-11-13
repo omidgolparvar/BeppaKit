@@ -18,5 +18,6 @@ extension BeppaConfig.Controller {
 	
 	public static var HasActivityIndicator	: Bool	= false
 	public static var NumberOfDigits		: Int	= 6
+	public static var HasDismissButton		: Bool	= false
 	
 }
