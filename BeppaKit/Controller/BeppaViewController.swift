@@ -125,7 +125,7 @@ public class BeppaViewController: UIViewController {
 extension BeppaViewController {
 	
 	private func setupViews() {
-		button_Dismiss.isHidden = !BeppaConfig.Controller.HasDismissButton
+		setupViews_DismissButton()
 		setupViews_BackgroundView()
 		setupViews_TitleLabel()
 		setupViews_MessageLabel()
@@ -133,6 +133,13 @@ extension BeppaViewController {
 		setupViews_DotViewStackView()
 		setupViews_DeleteButton()
 		setupViews_BiometricButton()
+	}
+	
+	private func setupViews_DismissButton() {
+		button_Dismiss.isHidden 		= !BeppaConfig.Controller.HasDismissButton
+		button_Dismiss.titleLabel?.font	= BeppaConfig.UserInterface.DismissButton.Font
+		button_Dismiss.tintColor		= BeppaConfig.UserInterface.DismissButton.TextColor
+		button_Dismiss.setTitle(BeppaConfig.UserInterface.DismissButton.Text, for: .normal)
 	}
 	
 	private func setupViews_BackgroundView() {
